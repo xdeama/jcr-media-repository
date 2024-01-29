@@ -1,0 +1,35 @@
+spring:
+  logging:
+    level:
+      root: INFO
+
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+
+web:
+  hostname: localhost
+  port: 8080
+
+media-repository:
+  oak:
+    file-store:
+      path: tmp/dev/media-repository
+      max-file-size: 100000000
+      username: admin
+      password: test
+
+management:
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+    metrics:
+      enabled: true
